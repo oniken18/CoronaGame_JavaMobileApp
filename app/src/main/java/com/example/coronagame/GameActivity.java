@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 import android.animation.Animator;
 import android.animation.ValueAnimator;
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
@@ -24,9 +25,9 @@ public class GameActivity extends AppCompatActivity {
     RelativeLayout mainLayout;
     private Handler mainHandler = new Handler();
     TextView txtPoints;
-    final Animation CloudAnimation[] = new Animation[4];
-    final Animation BatAnimation[] = new Animation[4];
-    final Animation DropsAnimation[] = new Animation[4];
+    final Animation[] CloudAnimation = new Animation[4];
+    final Animation[] BatAnimation = new Animation[4];
+    final Animation[] DropsAnimation = new Animation[4];
 
     public enum Direction {
         RIGHT(1),
@@ -147,15 +148,19 @@ public class GameActivity extends AppCompatActivity {
 
                 if (posX > getBatManCenter()) {
 
-                    batman.setBatRunningTo(D.RIGHT);
+                    batman.setBatRunningTo(Direction.RIGHT);
 
                 } else {
-                    batman.setBatRunningTo(D.LEFT);
+                    batman.setBatRunningTo(Direction.LEFT);
+                }
+
+                if (isGameOver){
+                    Intent i = new Intent(this, MainActivity.class);
+                    startActivity(i);
                 }
                 break;
-
             case MotionEvent.ACTION_UP:
-                batman.setBatRunningTo(D.MIDDLE);
+                batman.setBatRunningTo(Direction.MIDDLE);
                 break;
             default:
                 break;
@@ -174,7 +179,7 @@ public class GameActivity extends AppCompatActivity {
 
         Thread RainLoop = new Thread() {
             public void run() {
-                while (true) {
+                while (!isGameOver) {
                     new RainThread().start();
                     try {
                         Thread.sleep(10000);
@@ -207,7 +212,7 @@ public class GameActivity extends AppCompatActivity {
         txtGameOver.setTextColor(Color.RED);
         txtGameOver.setTextSize(50);
 
-        mainLayout.addView(txtGameOver, 15);
+        mainLayout.addView(txtGameOver, 0);
         txtGameOver.setX(200);
         txtGameOver.setY(500);
 
@@ -243,7 +248,7 @@ public class GameActivity extends AppCompatActivity {
             drops[3] = RainView.findViewById(R.id.drop4);
         }
 
-        public void removeRainLayout(){
+        private void removeRainLayout(){
             mainHandler.post(new Runnable() {
                 @Override
                 public void run() {
@@ -314,7 +319,7 @@ public class GameActivity extends AppCompatActivity {
             });
         }
 
-        public void createRainLayout() {
+        private void createRainLayout() {
             final RelativeLayout.LayoutParams LP;
             Random ran = new Random();
 
@@ -343,7 +348,7 @@ public class GameActivity extends AppCompatActivity {
             this.ImgNm = imgNm;
         }
 
-        public Boolean isCoronaTouch(ValueAnimator VA) {
+        private Boolean isCoronaTouch(ValueAnimator VA) {
 
             float midBat = getBatManCenter();
 
@@ -366,12 +371,12 @@ public class GameActivity extends AppCompatActivity {
             }
         }
 
-        public void deleteImageCorona() {
+        private void deleteImageCorona() {
             IV[this.ImgNm].setY(-130f);
             IV[this.ImgNm].setVisibility(View.INVISIBLE);
         }
 
-        public void startCoronaFalling() {
+        private void startCoronaFalling() {
             IV[this.ImgNm].setX(posX);
             IV[this.ImgNm].setY(600);
             IV[this.ImgNm].setVisibility(View.VISIBLE);
@@ -487,23 +492,22 @@ public class GameActivity extends AppCompatActivity {
 
     class BatmanThread extends Thread {
 
-        private Direction D;
-        private Direction BatRunningTo = D.MIDDLE;
+        private Direction BatRunningTo = Direction.MIDDLE;
         private int batmanFacing = 1;
 
-        public void setBatRunningTo(Direction d) {
+        private void setBatRunningTo(Direction d) {
             BatRunningTo = d;
         }
 
-        public Direction getBatRunningTo() {
+        private Direction getBatRunningTo() {
             return this.BatRunningTo;
         }
 
-        public void updateBatX(float f) {
+        private void updateBatX(float f) {
             Batman.setX(f);
         }
 
-        public int getBatmanFacing() {
+        private int getBatmanFacing() {
             return this.batmanFacing;
         }
 
@@ -515,7 +519,7 @@ public class GameActivity extends AppCompatActivity {
                     case RIGHT:
                         this.batmanFacing = 1;
                         Batman.setScaleX(1);
-                        while (D.RIGHT == getBatRunningTo() && BX < 1030) {
+                        while (Direction.RIGHT == getBatRunningTo() && BX < 1030) {
                             BX = BX + 0.004f;
                             updateBatX(BX);
                         }
@@ -524,7 +528,7 @@ public class GameActivity extends AppCompatActivity {
                     case LEFT:
                         this.batmanFacing = 2;
                         Batman.setScaleX(-1);
-                        while (D.LEFT == getBatRunningTo() && BX > (-200)) {
+                        while (Direction.LEFT == getBatRunningTo() && BX > (-200)) {
                             BX = BX - 0.004f;
                             updateBatX(BX);
                         }
