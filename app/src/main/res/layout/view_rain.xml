@@ -9,56 +9,64 @@
     <ImageView
         android:layout_width="10dp"
         android:layout_height="10dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:id="@+id/drop2"
         android:layout_width="13dp"
         android:layout_height="13dp"
         android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/active_drop"/>
 
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="13dp"
         android:layout_marginTop="5dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:id="@+id/drop1"
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="17dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/active_drop"/>
 
     <ImageView
         android:layout_width="12dp"
         android:layout_height="12dp"
         android:layout_marginStart="3dp"
         android:layout_marginTop="45dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="50dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:id="@+id/drop4"
@@ -66,34 +74,39 @@
         android:layout_height="13dp"
         android:layout_marginStart="12dp"
         android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginTop="3dp"
         android:translationX="30dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:layout_width="11dp"
         android:layout_height="11dp"
         android:layout_marginStart="6dp"
         android:layout_marginTop="80dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginTop="60dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:id="@+id/drop3"
@@ -101,28 +114,32 @@
         android:layout_height="14dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/active_drop"/>
 
     <ImageView
         android:layout_width="11dp"
         android:layout_height="11dp"
         android:layout_marginTop="60dp"
         android:translationX="28dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="40dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
     <ImageView
         android:layout_width="15dp"
         android:layout_height="15dp"
         android:layout_marginStart="24dp"
         android:layout_marginTop="75dp"
-        app:srcCompat="@drawable/drop" />
+        app:srcCompat="@drawable/drop"
+        android:contentDescription="@string/static_drop"/>
 
 
 </RelativeLayout>

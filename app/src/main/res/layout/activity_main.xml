@@ -17,7 +17,7 @@
         android:layout_marginTop="200dp"
         android:layout_marginStart="140dp"
         android:textSize="40sp"
-        android:text="START" />
+        android:text="@string/start_game_but" />
 
 
     <ImageView
@@ -27,7 +27,8 @@
         android:layout_marginStart="-50dp"
         android:scaleType="fitXY"
         android:translationX="150dp"
-        app:srcCompat="@drawable/cloud1" />
+        app:srcCompat="@drawable/cloud1"
+        android:contentDescription="@string/active_cloud"/>
 
     <ImageView
         android:id="@+id/cloud3"
@@ -35,8 +36,8 @@
         android:layout_height="100dp"
         android:layout_marginStart="-30dp"
         android:layout_marginTop="-40dp"
-        android:contentDescription="TODO"
-        app:srcCompat="@drawable/cloud1" />
+        app:srcCompat="@drawable/cloud1"
+        android:contentDescription="@string/active_cloud"/>
 
 
     <ImageView
@@ -45,7 +46,8 @@
         android:layout_height="100dp"
         android:layout_marginStart="-100dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/cloud1" />
+        app:srcCompat="@drawable/cloud1"
+        android:contentDescription="@string/active_cloud"/>
 
     <ImageView
         android:id="@+id/cloud2"
@@ -53,15 +55,9 @@
         android:layout_height="100dp"
         android:translationX="140dp"
         android:layout_marginTop="-40dp"
-        app:srcCompat="@drawable/cloud1" />
+        app:srcCompat="@drawable/cloud1"
+        android:contentDescription="@string/active_cloud"/>
 
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="50dp"
-        android:layout_marginTop="620dp"
-        android:scaleY="1.4"
-        android:src="@drawable/grass1"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -69,7 +65,7 @@
         android:layout_marginTop="620dp"
         android:scaleY="1.4"
         android:src="@drawable/grass1"
-        android:translationX="130dp" />
+        android:contentDescription="@string/static_grass"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -77,7 +73,17 @@
         android:layout_marginTop="620dp"
         android:scaleY="1.4"
         android:src="@drawable/grass1"
-        android:translationX="-130dp" />
+        android:translationX="130dp"
+        android:contentDescription="@string/static_grass"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="620dp"
+        android:scaleY="1.4"
+        android:src="@drawable/grass1"
+        android:translationX="-130dp"
+        android:contentDescription="@string/static_grass"/>
 
 
     <ImageView
@@ -88,7 +94,8 @@
         android:scaleX="-1"
         android:scaleY="1.4"
         android:src="@drawable/tree"
-        android:translationY="250dp" />
+        android:translationY="250dp"
+        android:contentDescription="@string/static_tree"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -96,7 +103,8 @@
         android:layout_marginTop="630dp"
         android:scaleY="1.4"
         android:src="@drawable/grass1"
-        android:translationX="130dp" />
+        android:translationX="130dp"
+        android:contentDescription="@string/static_grass"/>
 
 
     <ImageView
@@ -105,13 +113,15 @@
         android:layout_marginTop="630dp"
         android:scaleY="1.4"
         android:src="@drawable/grass1"
-        android:translationX="-130dp" />
+        android:translationX="-130dp"
+        android:contentDescription="@string/static_grass"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="630dp"
         android:scaleY="1.4"
-        android:src="@drawable/grass1"/>
+        android:src="@drawable/grass1"
+        android:contentDescription="@string/static_grass"/>
 
 </RelativeLayout>

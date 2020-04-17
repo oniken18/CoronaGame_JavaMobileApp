@@ -16,8 +16,8 @@
         android:layout_marginStart="320dp"
         android:layout_marginTop="95dp"
         android:textSize="16sp"
-        android:textColor="#FFFFFF"
-        android:text="0" />
+        android:textColor="#FFFFFF"/>
+
     <View
         android:id="@+id/CorHit1"
         android:layout_width="40dp"
@@ -25,8 +25,6 @@
         android:layout_marginTop="100dp"
         android:layout_marginStart="10dp"
         android:background="@drawable/border"/>
-
-
 
     <View
         android:id="@+id/CorHit2"
@@ -68,7 +66,8 @@
         android:layout_marginStart="-50dp"
         android:scaleType="fitXY"
         android:translationX="150dp"
-        app:srcCompat="@drawable/cloud1" />
+        app:srcCompat="@drawable/cloud1"
+        android:contentDescription="@string/active_cloud"/>
 
     <ImageView
         android:id="@+id/cloud3"
@@ -76,8 +75,8 @@
         android:layout_height="100dp"
         android:layout_marginStart="-30dp"
         android:layout_marginTop="-40dp"
-        android:contentDescription="TODO"
-        app:srcCompat="@drawable/cloud1" />
+        app:srcCompat="@drawable/cloud1"
+        android:contentDescription="@string/active_cloud"/>
 
 
     <ImageView
@@ -86,7 +85,8 @@
         android:layout_height="100dp"
         android:layout_marginStart="-100dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/cloud1" />
+        app:srcCompat="@drawable/cloud1"
+        android:contentDescription="@string/active_cloud"/>
 
     <ImageView
         android:id="@+id/cloud2"
@@ -94,7 +94,8 @@
         android:layout_height="100dp"
         android:translationX="140dp"
         android:layout_marginTop="-40dp"
-        app:srcCompat="@drawable/cloud1" />
+        app:srcCompat="@drawable/cloud1"
+        android:contentDescription="@string/active_cloud"/>
 
 
     <pl.droidsonroids.gif.GifImageView
@@ -139,7 +140,8 @@
         android:layout_height="50dp"
         android:layout_marginTop="620dp"
         android:scaleY="1.4"
-        android:src="@drawable/grass1"/>
+        android:src="@drawable/grass1"
+        android:contentDescription="@string/static_grass"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -147,7 +149,8 @@
         android:layout_marginTop="620dp"
         android:scaleY="1.4"
         android:src="@drawable/grass1"
-        android:translationX="130dp" />
+        android:translationX="130dp"
+        android:contentDescription="@string/static_grass"/>
 
     <ImageView
         android:layout_width="wrap_content"
@@ -155,7 +158,8 @@
         android:layout_marginTop="620dp"
         android:scaleY="1.4"
         android:src="@drawable/grass1"
-        android:translationX="-130dp" />
+        android:translationX="-130dp"
+        android:contentDescription="@string/static_grass"/>
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/tree1"
@@ -166,7 +170,7 @@
         android:scaleY="1.4"
         android:src="@drawable/tree"
         android:translationY="250dp"
-        android:visibility="invisible" />
+        android:visibility="invisible"/>
 
 
     <ImageView
@@ -177,7 +181,8 @@
         android:scaleX="-1"
         android:scaleY="1.4"
         android:src="@drawable/tree"
-        android:translationY="250dp" />
+        android:translationY="250dp"
+        android:contentDescription="@string/static_tree"/>
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/batman"
@@ -185,7 +190,7 @@
         android:layout_height="200dp"
         android:layout_marginTop="530dp"
         android:scaleX="1"
-        android:src="@drawable/batman1"/>
+        android:src="@drawable/batman1" />
 
 
     <ImageView
@@ -194,35 +199,40 @@
         android:layout_marginTop="630dp"
         android:scaleY="1.4"
         android:src="@drawable/grass1"
-        android:translationX="130dp" />
+        android:translationX="130dp"
+        android:contentDescription="@string/static_grass"/>
 
     <ImageView
         android:id="@+id/Cor1"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:visibility="invisible"
-        android:src="@drawable/virus"/>
+        android:src="@drawable/virus"
+        android:contentDescription="@string/active_virus"/>
 
     <ImageView
         android:id="@+id/Cor2"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:visibility="invisible"
-        android:src="@drawable/virus"/>
+        android:src="@drawable/virus"
+        android:contentDescription="@string/active_virus"/>
 
     <ImageView
         android:id="@+id/Cor3"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:visibility="invisible"
-        android:src="@drawable/virus"/>
+        android:src="@drawable/virus"
+        android:contentDescription="@string/active_virus"/>
 
     <ImageView
         android:id="@+id/Cor4"
         android:layout_width="40dp"
         android:layout_height="40dp"
         android:visibility="invisible"
-        android:src="@drawable/virus"/>
+        android:src="@drawable/virus"
+        android:contentDescription="@string/active_virus"/>
 
 
     <ImageView
@@ -231,27 +241,15 @@
         android:layout_marginTop="630dp"
         android:scaleY="1.4"
         android:src="@drawable/grass1"
-        android:translationX="-130dp" />
+        android:translationX="-130dp"
+        android:contentDescription="@string/static_grass"/>
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="50dp"
         android:layout_marginTop="630dp"
         android:scaleY="1.4"
-        android:src="@drawable/grass1"/>
-
-    <View
-        android:id="@+id/dot1"
-        android:layout_width="3dp"
-        android:layout_height="3dp"
-        android:background="#FFFFFF"/>
-
-    <View
-        android:id="@+id/dot2"
-        android:layout_width="3dp"
-        android:layout_height="3dp"
-
-        android:background="#FFFFFF"/>
-
+        android:src="@drawable/grass1"
+        android:contentDescription="@string/static_grass"/>
 
 </RelativeLayout>
